@@ -1,0 +1,2 @@
+# Inventory
+An inventory application write with ruby
