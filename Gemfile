@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+gem 'cuba'
+gem 'cuba-contrib'
+gem 'mote'
+gem 'cutest'
+gem 'puma'
+gem 'rest-client'
