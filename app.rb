@@ -1,11 +1,13 @@
 require 'cuba'
 require 'cuba/contrib'
 require 'rack'
+require 'rack/protection'
 require_relative 'helpers'
 require './settings'
 
 Cuba.plugin Cuba::Mote
 Cuba.plugin Helpers
+Cuba.use Rack::Protection
 
 Dir['./lib/**/*.rb'].each { |f| require f }
 Dir['./models/**/*.rb'].each { |f| require f }
