@@ -12,7 +12,7 @@ Cuba.plugin Cuba::Mote
 Cuba.plugin Helpers
 Cuba.use Rack::Protection
 
-Ohm.redis = Redic.new REDIS_URL
+Ohm.connect url: REDIS_URL
 
 Dir['./lib/**/*.rb'].each { |f| require f }
 Dir['./models/**/*.rb'].each { |f| require f }
