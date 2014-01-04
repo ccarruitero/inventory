@@ -1,13 +1,18 @@
 require 'cuba'
 require 'cuba/contrib'
+require 'ohm'
 require 'rack'
 require 'rack/protection'
 require_relative 'helpers'
 require './settings'
 
+REDIS_URL = ENV.fetch 'REDIS_URL'
+
 Cuba.plugin Cuba::Mote
 Cuba.plugin Helpers
 Cuba.use Rack::Protection
+
+Ohm.redis = Redic.new REDIS_URL
 
 Dir['./lib/**/*.rb'].each { |f| require f }
 Dir['./models/**/*.rb'].each { |f| require f }
