@@ -1,6 +1,7 @@
 require 'cuba'
 require 'cuba/contrib'
 require 'ohm'
+require 'ohm/contrib'
 require 'rack'
 require 'rack/protection'
 require_relative 'helpers'
