@@ -3,6 +3,6 @@ class EntryProduct < Ohm::Model
 
   attribute :amount, Type::Decimal
   attribute :price, Type::Decimal
-  reference :product, Product
-  reference :entry, Entry
+  reference :product, :Product
+  reference :entry, :Entry
 end

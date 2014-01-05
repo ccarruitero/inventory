@@ -1,5 +1,5 @@
 class Warehouse < Ohm::Model
   attribute :name
 
-  collection :entries, Entry
+  collection :entries, :Entry
 end
