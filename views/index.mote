@@ -1,12 +1,4 @@
 <h1>Inventory</h1>
-<nav>
-% if this.login?
-  Welcome {{email}}
-  <a href="#" id="logout-btn">Logout</a>
-% else
-  <a href="#" id="login-btn">Login</a>
-% end
-</nav>
 
 <script>
     navigator.id.watch({

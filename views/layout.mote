@@ -7,6 +7,15 @@
   </head>
 
   <body>
+    <nav>
+    % if this.login?
+      Welcome {{email}}
+      <a href="#" id="logout-btn">Logout</a>
+    % else
+      <a href="#" id="login-btn">Login</a>
+    % end
+    </nav>
+
     {{ content }}
   </body>
 </html>
