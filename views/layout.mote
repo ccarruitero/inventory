@@ -18,5 +18,14 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://login.persona.org/include.js"></script>
+    
+    <script>
+      % if this.login?
+        var currentUser = '{{ email }}';
+      % else
+        var currentUser = null;
+      % end
+    </script>
+    <script src="/js/persona.js"></script>
   </body>
 </html>
