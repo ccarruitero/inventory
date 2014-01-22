@@ -1,0 +1,10 @@
+<h1>Products</h1>
+
+<section id="products-list">
+% products.each do |product|
+  <div class="product">
+    <li> {{product.name}}</li>
+    <li> {{produc.current_amount}}</li>
+  </div>
+% end
+</section>
