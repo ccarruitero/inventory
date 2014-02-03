@@ -8,7 +8,7 @@ class Login < Cuba
       req = RestClient::Resource
       assertion_params = {
         assertion: assertion,
-        audience: "http://localhost:9292"
+        audience: "http://" + request.host_with_port
       }
       res = JSON.parse(req.new(server, :verify_ssl=> true).post(assertion_params))
 
