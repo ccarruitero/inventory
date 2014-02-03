@@ -41,4 +41,8 @@ Cuba.define do
       res.redirect '/'
     end
   end
+
+  on 'products' do
+    run Products
+  end
 end
