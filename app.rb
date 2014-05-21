@@ -29,6 +29,10 @@ Cuba.define do
       email = session[:email]
       res.write view('index', email: email)
     end
+
+    if !login?
+      res.redirect '/'
+    end
   end
 
   on post do
