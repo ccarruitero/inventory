@@ -5,12 +5,14 @@ class Login < Cuba
   define do
     on default, param(:assertion) do |assertion|
       server = 'https://verifier.login.persona.org/verify'
+      url = req.host_with_port
       req = RestClient::Resource
       assertion_params = {
         assertion: assertion,
-        audience: "http://" + request.host_with_port
+        audience: "http://" + url
       }
-      res = JSON.parse(req.new(server, :verify_ssl=> true).post(assertion_params))
+      res = JSON.parse(req.new(server,
+                               :verify_ssl=> true).post(assertion_params))
 
       if res['status'] == 'okay'
         session[:email] = res['email']
