@@ -16,8 +16,7 @@ GEM
       scrivener (~> 0.0.3)
     ohm-contrib (1.2)
       ohm (~> 1.2)
-    puma (2.7.1)
-      rack (>= 1.1, < 2.0)
+    puma (2.15.3)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -38,7 +37,10 @@ DEPENDENCIES
   mote
   ohm
   ohm-contrib
-  puma
+  puma (~> 2.15.3)
   rack-protection
   rack-test
   rest-client
+
+BUNDLED WITH
+   1.11.2
