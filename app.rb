@@ -17,4 +17,24 @@ Cuba.define do
   on 'products' do
     run Products
   end
+
+  on 'suppliers' do
+    run Suppliers
+  end
+
+  on 'warehouses' do
+    run Warehouses
+  end
+
+  on 'entries' do
+    run Entries
+  end
+
+  on 'entry_products' do
+    run EntryProducts
+  end
+
+  on 'users' do
+    run Users
+  end
 end
