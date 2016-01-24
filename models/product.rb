@@ -9,4 +9,11 @@ class Product < Ohm::Model
   collection :entries, :EntryProduct
 
   unique :name
+
+  def to_hash
+    super.merge name: name,
+                initial_amount: initial_amount,
+                category_id: category_id,
+                price: price
+  end
 end
